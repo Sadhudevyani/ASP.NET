@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Instructors";
+}
+<h2>Instructors</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>InstructorId</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Course</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var instructor in Model)
+        {
+            <tr>
+                <td>@instructor.InstructorId</td>
+                <td>@instructor.FirstName</td>
+                <td>@instructor.LastName</td>
+                <td>@instructor.Email</td>
+                <td>@instructor.Course.CourseName</td>
+            </tr>
+        }
+    </tbody>
+</table>
